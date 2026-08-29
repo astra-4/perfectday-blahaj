@@ -157,7 +157,63 @@
             <button class="main-button right" onclick="nextQuestion()">Next</button>
         </div>
 
-    <!--activities-->
+        <!--activities-->
+        <div id="q5" class="screen hidden">
+            <p class="question">What do you want to do?</p>
+            <p class="small">pick as many as you want</p>
+
+            <div class="options">
+
+                <div class="option" onclick="pickActivity(this, 'Ziplining 🪡')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3fGUkAj_pyqM7Sg-hw-b-2xJygQ2V8tcj30dSmiXg7A&s=10" alt="Ziplining">
+                    <p class="option-name">Ziplining 🪡</p>
+                    <p class="small">nroooom</p>
+                </div>
+
+                <div class="option" onclick="pickActivity(this, 'Swimming 🏊')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0J-8llszIuWnApiKbzk-QjLszikEyUWXDlKkm0Jtdg&s=10" alt="Swimming">
+                    <p class="option-name">Swimming 🏊</p>
+                    <p class="small">make a splash!</p>
+                </div>
+
+                <div class="option" onclick="pickActivity(this, 'Skydiving 🪂')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzR_bokTbIE_5UFyJGpdgJUWh2bQjbbfGQLcZzHO0R3w&s=10" alt="Skydiving">
+                    <p class="option-name">Skydiving 🪂</p>
+                    <p class="small">fly!</p>
+                </div>
+
+                <div class="option" onclick="pickActivity(this, 'Skiing ⛷️')">
+                    <img class="option-image" src="https://scene7.vailresorts.com/is/image/vailresorts/20260109_PC_Loosmann_003:Epic-Pass-Home-Page-Hero-Mobile?resMode=sharp2&wid=412&fit=constrain,1&dpr=on,2.625" alt="Skiing">
+                    <p class="option-name">Skiing ⛷️</p>
+                    <p class="small">weeeeee</p>
+                </div>
+
+                <div class="option" onclick="pickActivity(this, 'Hiking 🥾')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR62EzPlfMCvSAQBQfF9CUslTFBmWyijWAiu0Zj5KF8YQ&s=10" alt="Hiking">
+                    <p class="option-name">Hiking 🥾</p>
+                    <p class="small">enjoy the beautiful outdoors!</p>
+                </div>
+
+                <div class="option" onclick="pickActivity(this, 'Banana boating 🍌🚣')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqbUqRLWiLsrVvyi7wCaHq3DFVf1muibdAlt10Y1ydOg&s=10" alt="Banana boating">
+                    <p class="option-name">Banana boating 🍌🚣</p>
+                    <p class="small">enjoy the oceanview!</p>
+                </div>
+
+            </div>
+
+            <div class="option other" id="activity-other" onclick="pickOther('activity')">
+                <p class="option-name">Other...</p>
+                <p class="small">type your own activity</p>
+            </div>
+            <input type="text" id="activity-other-input" class="hidden" placeholder="type what you want to do" oninput="typedOther('activity')">
+
+            <hr>
+            <button class="back-button" onclick="previousQuestion()">Back</button>
+            <button class="main-button right" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!--notes-->
 
     </div>
 </body>
