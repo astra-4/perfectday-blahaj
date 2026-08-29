@@ -214,8 +214,51 @@
         </div>
 
         <!--notes-->
+        <div id="q6" class="screen hidden">
+            <p class="question">Anything else you want to remember?</p>
+            <textarea id="notes-input" rows="4" placeholder="anything else about your day..."></textarea>
 
+            <hr>
+            <button class="back-button" onclick="previousQuestion()">Back</button>
+            <button class="main-button right" onclick="finishPlanner()">Finish</button>
+        </div>
+
+
+        <!--summary-->
+        <div id="results" class="screen hidden">
+            <h2>Your Perfect Day</h2>
+            <p class="date-line" id="results-date"></p>
+
+            <h3>Where you're going</h3>
+            <div class="info-box" id="results-place"></div>
+
+            <h3>What you're eating</h3>
+            <div class="info-box" id="results-food"></div>
+
+            <h3>What you're doing</h3>
+            <div class="info-box" id="results-activities"></div>
+
+            <h3>What to bring</h3>
+            <div id="results-bring"></div>
+            <p class="small">add your own: ______________________</p>
+
+            <div id="notes-area" class="hidden">
+                <h3>Notes</h3>
+                <div class="info-box" id="results-notes"></div>
+            </div>
+
+            <p class="small">your own note: ______________________<br>______________________________________</p>
+
+            <hr>
+            <button class="back-button" onclick="restartPlanner()">Start Over</button>
+        </div>
+
+
+        <hr>
+        <p class="small">made by the blahajers for sunbeam 2026!</p>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
