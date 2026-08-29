@@ -2,8 +2,6 @@ currentPage = 0;
 pagesIdList = ["welcome", "q1", "q2", "q3", "q4", "q5", "q6", "results"];
 pagesLabelList = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Results!"];
 
-date = null;
-time = null;
 place = null;
 food = null;
 activity = null;
@@ -48,8 +46,16 @@ function setQuestionVisible() {
     } else {
         document.getElementById("progress-area").classList.add("hidden");
     }
+
+    document.getElementById("results-date").innerText = document.getElementById("date-input").value;
 }
 
 function pickPlace(element, label) {
-    place = label;
+    document.getElementById("place-other-input").classList.add("hidden");
+    placeObject = {};
+    place = placeObject[label];
+}
+
+function pickOther(ummTestIguessidk) {
+    document.getElementById("place-other-input").classList.remove("hidden");
 }
