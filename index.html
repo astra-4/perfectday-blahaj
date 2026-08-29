@@ -32,7 +32,7 @@
             <button class="main-button" onclick="startPlanner()">Start Planning</button>
         </div>
 
-        //question 1 - date
+        <!--date-->>
         <div id="q1" class="screen hidden">
             <p class="question">When is your perfect day?</p>
             <input type="date" id="date-input">
@@ -59,7 +59,6 @@
             <p class="small">pick one</p>
 
             <div class="options">
-
                 <div class="option" onclick="pickPlace(this, 'Amusement park 🎢')">
                     <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhzBDiNwLmfcoiRim5Z1LqhDfWIdzsjrpxHWrZB5Tqg&s=10" alt="Amusement park">
                     <p class="option-name">Amusement park 🎢</p>
@@ -102,8 +101,65 @@
             <button class="back-button" onclick="previousQuestion()">Back</button>
             <button class="main-button right" onclick="nextQuestion()">Next</button>
         </div>
-    </div>
 
+        <!--food-->
+        <div id="q4" class="screen hidden">
+            <p class="question">What do you want to eat?</p>
+            <p class="small">pick as many as you want</p>
+
+            <div class="options">
+
+                <div class="option" onclick="pickFood(this, 'Pizza 🍕')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW35nyHWc7mtev_T1Sy1etVfe6XYLWsG882mrGXWCyqQ&s=10" alt="Pizza">
+                    <p class="option-name">Pizza 🍕</p>
+                    <p class="small">the classic</p>
+                </div>
+
+                <div class="option" onclick="pickFood(this, 'Buffet 🍔')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReHTk3o1cf06wgMTv11GD9uHFNNhLcmcWendV2D5ckCw&s=10" alt="Buffet">
+                    <p class="option-name">Buffet 🍔</p>
+                    <p class="small">all the foods!</p>
+                </div>
+
+                <div class="option" onclick="pickFood(this, 'Homemade food 🍱')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSTgH85zOQdtqtJ71nla6q2K2gwwsHhXxYFrME6jtiWw&s=10" alt="Homemade food">
+                    <p class="option-name">Homemade food 🍱</p>
+                    <p class="small">from the heart</p>
+                </div>
+
+                <div class="option" onclick="pickFood(this, 'Ice cream 🍦')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfCBzkPnRWGieAGc9FhdQ3vrhJ9O8IlvUgnZT1pwW6vQ&s=10" alt="Ice cream">
+                    <p class="option-name">Ice cream 🍦</p>
+                    <p class="small">we all scream for ice cream!</p>
+                </div>
+
+                <div class="option" onclick="pickFood(this, 'Pasta 🍝')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5zKaadlOUEGxd5fpwNMIcAzYVKSUkohespAq-RVufg&s=10" alt="Pasta">
+                    <p class="option-name">Pasta 🍝</p>
+                    <p class="small">slurrrrp</p>
+                </div>
+
+                <div class="option" onclick="pickFood(this, 'Grilled cheese 🥪')">
+                    <img class="option-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_6EZJs3uyTY5qHxbNZWSbgMEZUcihUJbq_l8dvvgW5g&s=10" alt="Grilled cheese">
+                    <p class="option-name">Grilled cheese 🥪</p>
+                    <p class="small">gilled cheese/p>
+                </div>
+            </div>
+
+            <div class="option other" id="food-other" onclick="pickOther('food')">
+                <p class="option-name">Other...</p>
+                <p class="small">type your own food</p>
+            </div>
+            <input type="text" id="food-other-input" class="hidden" placeholder="type what you want to eat" oninput="typedOther('food')">
+
+            <hr>
+            <button class="back-button" onclick="previousQuestion()">Back</button>
+            <button class="main-button right" onclick="nextQuestion()">Next</button>
+        </div>
+
+    <!--activities-->
+
+    </div>
 </body>
 
 </html>
