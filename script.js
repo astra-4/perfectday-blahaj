@@ -87,7 +87,7 @@ function pickPlace(element, label) {
 
 function pickFood(element, label) {
     document.getElementById("food-other-input").classList.add("hidden");
-    document.getElementById("place-other-input").value = "";
+    document.getElementById("food-other-input").value = "";
     food = label;
 
     optionDivs = document.getElementById("q4").getElementsByClassName("option");
@@ -99,7 +99,7 @@ function pickFood(element, label) {
 
 function pickActivity(element, label) {
     document.getElementById("activity-other-input").classList.add("hidden");
-    document.getElementById("place-other-input").value = "";
+    document.getElementById("activity-other-input").value = "";
     activity = label;
 
     optionDivs = document.getElementById("q5").getElementsByClassName("option");
@@ -143,7 +143,7 @@ function generateResultsScreen() {
     if (dateValue == "") {
         document.getElementById("results-date").innerText = "no date picked";
     } else {
-        date = new Date(dateValue + "T" + timeValue);
+        date = new Date(dateValue + "T" + (timeValue == "" ? "09:00" : timeValue));
         document.getElementById("results-date").innerText = date.toLocaleString();
     }
 
@@ -155,20 +155,20 @@ function generateResultsScreen() {
     stuffToBring = "Phone\nWallet\nKeys\n";
 
     placeSpecificItems = {
-        "Amusement park 🎢": "Tickets\nCash for snacks\n",
-        "Park 🏞️": "Picnic blanket\n",
-        "Travel 🗺️": "Luggage\nPassport\n",
-        "Stay home 🏚️": "Comfy blanket\n",
-        "Friend\u2019s house 🏘️": "Games\n"
+        "Amusement park \uD83C\uDFA2": "Tickets\nCash for snacks\n",
+        "Park \uD83C\uDFDE\uFE0F": "Picnic blanket\n",
+        "Travel \uD83D\uDDFA\uFE0F": "Luggage\nPassport\n",
+        "Stay home \uD83C\uDFDA\uFE0F": "Comfy blanket\n",
+        "Friend\u2019s house \uD83C\uDFD8\uFE0F": "Games\n"
     };
 
     activitySpecificItems = {
-        "Ziplining 🪡": "Closed-toe shoes\n",
-        "Swimming 🏊": "Swimsuit\nTowel\n",
-        "Skydiving 🪂": "Closed-toe shoes\n",
-        "Skiing ⛷️": "Warm jacket\nGoggles\nGloves\n",
-        "Hiking 🥾": "Hiking shoes\nSnacks\n",
-        "Banana boating 🍌🚣": "Swimsuit\nTowel\n"
+        "Ziplining \uD83E\uDDF5": "Closed-toe shoes\n",
+        "Swimming \uD83C\uDFCA": "Swimsuit\nTowel\n",
+        "Skydiving \uD83E\uDE82": "Closed-toe shoes\n",
+        "Skiing \u26F7\uFE0F": "Warm jacket\nGoggles\nGloves\n",
+        "Hiking \uD83E\uDD7E": "Hiking shoes\nSnacks\n",
+        "Banana boating \uD83C\uDF4C\uD83D\uDEA3": "Swimsuit\nTowel\n"
     };
 
     if (placeSpecificItems[place]) {
