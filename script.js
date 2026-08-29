@@ -2,6 +2,7 @@ currentPage = 0;
 pagesIdList = ["welcome", "q1", "q2", "q3", "q4", "q5", "q6", "results"];
 pagesLabelList = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Results!"];
 
+date = null;
 place = null;
 food = null;
 activity = null;
@@ -47,7 +48,11 @@ function setQuestionVisible() {
         document.getElementById("progress-area").classList.add("hidden");
     }
 
-    document.getElementById("results-date").innerText = document.getElementById("date-input").value;
+    /* UNFINISHED
+    date = new Date(document.getElementById("date-input").value + "T" + document.getElementById("time-input").value);
+    console.log(document.getElementById("date-input").value);
+
+    document.getElementById("results-date").innerText = date.toLocaleString(); */
 }
 
 function pickPlace(element, label) {
