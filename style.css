@@ -192,3 +192,43 @@ button {
 
 
 /* progress bar */
+.bar-outside {
+    background-color: #EAF4F5;
+    border: 1px solid #A9CDD1;
+    height: 14px;
+}
+
+.bar-inside {
+    background-color: #A8D8DC;
+    height: 14px;
+    width: 0%;
+}
+
+/*summary boxes */
+.info-box {
+    background-color: #EAF4F5;
+    border: 1px solid #A9CDD1;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 14px;
+}
+
+.tip {
+    background-color: #F6E3D8;
+    border: 1px solid #DCBCA9;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding: 12px;
+}
+
+
+@media (max-width: 500px) {
+    .options {
+        grid-template-columns: 1fr;
+    }
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
